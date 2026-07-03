@@ -1,6 +1,6 @@
 # Privacy Policy — Che si fa?
 
-**Last updated:** 6 June 2026
+**Last updated:** 1 July 2026
 **App version:** 1.0.0
 
 ---
@@ -12,6 +12,7 @@
 - Your **saved events, favourites and settings stay on your device** and are never uploaded to any server.
 - We use **crash diagnostics** (to keep the app stable) and, **only with your consent**, **anonymous usage analytics** (to understand what works). You can change your mind anytime in settings.
 - **Location** is requested only when you tap a feature that needs it (e.g. "events near me" or the map), is processed **on your device**, and is **never sent to or stored on our servers**.
+- You can **voluntarily** report a problem on an event or suggest a new event. Only in that case are your **anonymous device identifier** and the data you enter sent to and stored on our servers (Supabase, EU) so they can be reviewed.
 - **We do not sell your data** and we **do not run ads or track you across other apps.**
 
 The full version below explains everything in detail, as required by Regulation (EU) 2016/679 (GDPR).
@@ -33,7 +34,7 @@ No Data Protection Officer (DPO) has been appointed, as the conditions of Art. 3
 
 ## 2. Who this policy is for
 
-This policy describes how we process data of users of the **Che si fa?** mobile application ("the App") on iOS, Android and web. The App is a **read-only** content aggregator: events and places are supplied by an external system and you browse them without being able to edit them.
+This policy describes how we process data of users of the **Che si fa?** mobile application ("the App") on iOS, Android and web. The App is primarily a **browse-only** content aggregator: events and places are supplied by an external system and you browse them. In addition, the App allows **optional, voluntary contributions** — reporting a problem on an existing event or suggesting a new event — which are subject to **manual review** by our team before any publication.
 
 The App is intended for residents, tourists and outdoor enthusiasts. It is **not intended for children under 13** (see § 12).
 
@@ -45,17 +46,19 @@ We process **only the data strictly necessary** for the App to work. We do not c
 
 | # | Data | Purpose | Legal basis (Art. 6 GDPR) | Where it stays | Retention |
 |---|---|---|---|---|---|
-| A | **Anonymous device identifier** (`device_id`: a random UUID generated on the device) | Tell installations apart for diagnostics and statistics, without identifying you | Diagnostics: legitimate interest (f) · Analytics: consent (a) | On device; shared with Sentry and (only with consent) PostHog | Until you uninstall the App or clear its data |
+| A | **Anonymous device identifier** (`device_id`: a random UUID generated on the device) | Tell installations apart for diagnostics and statistics, without identifying you; associate voluntary contributions and handle possible abuse | Diagnostics: legitimate interest (f) · Analytics: consent (a) · Contributions: legitimate interest (f) | On device; shared with Sentry and (only with consent) PostHog; sent to Supabase (EU) only when you submit a contribution | Until you uninstall the App or clear its data; contributions are retained per row H |
 | B | **Diagnostics & crash data** (device model, OS, app version, screen/route, technical error log, performance data) | Detect and fix errors and crashes; keep the App secure and stable | Legitimate interest (f) | Sentry servers (EU) | Up to ~90 days |
 | C | **Anonymous usage analytics** (screens viewed, in-app actions, device type) | Understand how the App is used and improve it | **Consent (a)** | PostHog servers (EU) | Max 12 months, then aggregated/deleted |
 | D | **Geolocation** (GPS coordinates) | Show nearby events and places; sort results by distance | Consent, via the OS permission (a) | **On your device only**, in temporary memory | Not retained: discarded when you close the App |
 | E | **Device calendar** (writing an event) | Add an event you chose to your calendar | Consent, via the OS permission (a) | **On your device only** | Managed by your calendar |
 | F | **Favourites, saved events and settings** | Make your lists and preferences work | Performance of the service (b) / legitimate interest (f) | **On your device only** (local storage) | Until you delete them or uninstall the App |
 | G | **Technical connection data** (IP address, request data) sent to providers that deliver content, images, maps and updates | Deliver content and run the App | Legitimate interest / technical necessity (f) | Providers' servers (see § 6) | Per each provider's logs |
+| H | **Voluntary user contributions** (`device_id`; for reports: problem type and an optional comment; for suggestions: title, date/time, area, category, city, and optional description, official link and note to the team) | Improve the quality and coverage of the events catalogue through reports and suggestions | Legitimate interest (f) / voluntary provision | **Supabase (EU)** servers | As long as needed for review and catalogue improvement, or until you request deletion (see § 8 and § 9) |
 
 **Important notes:**
 
-- The `device_id` (row A) is a random code generated on your device: it **contains no name, is not linked to your real identity** and cannot be traced back to you. It only avoids counting the same installation twice.
+- The `device_id` (row A) is a random code generated on your device: it **contains no name, is not linked to your real identity** and cannot be traced back to you. It avoids counting the same installation twice and, for contributions (row H), lets us moderate abuse and act on your deletion or block requests.
+- **Contributions (row H)** are **optional**: they are sent **only when you choose** to report a problem or suggest an event. Suggestions are **not published automatically**: they stay private and visible only to the team until manually verified.
 - **Usage analytics (row C)** is active **only if you give consent**. Without consent, the App works normally and we send no analytics data.
 - **Location (row D)** and **calendar (row E)** are processed **on your device only**: we **do not receive, transmit or store** them on our servers.
 
@@ -98,7 +101,7 @@ We do not sell or rent your data. To run the service we rely on technology provi
 |---|---|---|---|---|
 | **Sentry** (Functional Software, Inc.) | Crash & error diagnostics | Technical error data, `device_id` | EU (Germany) | https://sentry.io/privacy/ |
 | **PostHog** (PostHog, Inc.) | Usage analytics (consent only) | Anonymous usage events, `device_id` | EU (Frankfurt) | https://posthog.com/privacy |
-| **Supabase** (Supabase, Inc.) | Content database & image storage (read-only) | Technical connection data (IP) | EU (West EU — Ireland) | https://supabase.com/privacy |
+| **Supabase** (Supabase, Inc.) | Content database & image storage; **storage of voluntary user contributions** | Technical connection data (IP) and, when you contribute, `device_id` and submitted content (row H) | EU (West EU — Ireland) | https://supabase.com/privacy |
 | **Expo / EAS** (650 Industries, Inc.) | App update delivery (OTA) | Technical connection data (IP, device info) | USA | https://expo.dev/privacy |
 | **Apple** (Apple Inc.) | Map on iOS (Apple Maps) and App Store distribution | Technical map data, download data | Global | https://www.apple.com/legal/privacy/ |
 | **OpenStreetMap Foundation** | Map tiles on Android | Technical connection data (IP) | EU/UK | https://wiki.osmfoundation.org/wiki/Privacy_Policy |
@@ -121,6 +124,7 @@ Some providers (e.g. **Expo**, **Apple**, **Google**, and Sentry/PostHog as US c
 - **Local data on the device** (favourites, settings, `device_id`): kept until you delete them in the App or uninstall it.
 - **Crash diagnostics (Sentry):** kept for a limited period, typically about **90 days**.
 - **Usage analytics (PostHog):** kept only as long as needed for statistical purposes, and in any case no longer than **12 months**, after which it is aggregated or deleted.
+- **Voluntary contributions (Supabase, row H):** reports and suggestions are kept as long as needed for review and improvement of the events catalogue; any block of a device for abuse is kept while it is active. You can request their deletion (see § 9).
 - **Location and calendar:** not retained by us (see § 3).
 
 At the end of these periods the data is irreversibly deleted or anonymised.
@@ -138,7 +142,7 @@ As a data subject you have the right, within the limits of Arts. 15–22 GDPR, t
 - obtain **data portability** for data processed on the basis of consent or contract;
 - **withdraw consent** at any time (for analytics, directly in the App's settings), without affecting prior lawful processing.
 
-**How to exercise them.** Most data stays on your device: you can delete it yourself by clearing favourites, disabling analytics, or uninstalling the App. For server-side data (diagnostics/analytics) write to the address in § 1. Since we identify you only by an anonymous code (`device_id`), to act on your request we may ask you to provide that code, available in the App's Profile section; without it we may be unable to locate the data concerning you (Art. 11 GDPR).
+**How to exercise them.** Most data stays on your device: you can delete it yourself by clearing favourites, disabling analytics, or uninstalling the App. For server-side data (diagnostics/analytics and **voluntary contributions** on Supabase) write to the address in § 1. Since we identify you only by an anonymous code (`device_id`), to act on your request we may ask you to provide that code, available in the App's Profile section; without it we may be unable to locate the data concerning you (Art. 11 GDPR).
 
 **Complaint to the supervisory authority.** If you believe the processing infringes the GDPR, you may lodge a complaint with the Italian **Garante per la protezione dei dati personali** (Piazza Venezia 11, 00187 Rome — www.garante.it — garante@gpdp.it), or with the authority of the EU State where you reside.
 
@@ -152,7 +156,7 @@ We adopt appropriate technical and organisational measures to protect data. In p
 
 ## 11. Automated decision-making
 
-We do **not** carry out any automated decision-making or profiling producing legal or similarly significant effects on you (Art. 22 GDPR).
+We do **not** carry out any automated decision-making or profiling producing legal or similarly significant effects on you (Art. 22 GDPR). The review of voluntary contributions (reports and suggestions) is carried out **manually** by our team; suspending a device from the contribution features in case of abuse or spam is an operational security measure and does not constitute marketing profiling.
 
 ---
 

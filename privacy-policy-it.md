@@ -1,6 +1,6 @@
 # Informativa sulla Privacy — Che si fa?
 
-**Ultimo aggiornamento:** 6 giugno 2026
+**Ultimo aggiornamento:** 1 luglio 2026
 **Versione applicazione:** 1.0.0
 
 ---
@@ -12,6 +12,7 @@
 - I tuoi **eventi salvati, preferiti e impostazioni restano sul tuo dispositivo** e non vengono caricati su nessun server.
 - Usiamo strumenti di **diagnostica dei crash** (per tenere l'app stabile) e, **solo con il tuo consenso**, strumenti di **statistica d'uso anonima** (per capire cosa funziona). Puoi cambiare idea quando vuoi dalle impostazioni.
 - La **posizione** viene richiesta solo quando tocchi una funzione che la usa (es. "eventi vicino a me" o la mappa), è elaborata **sul tuo dispositivo** e **non viene inviata né salvata** sui nostri server.
+- Puoi **volontariamente** segnalare un errore su un evento o suggerire un nuovo evento. Solo in quel caso il tuo **ID anonimo del dispositivo** e i dati che inserisci vengono inviati e salvati sui nostri server (Supabase, UE) per consentirne la verifica.
 - **Non vendiamo i tuoi dati** e **non facciamo pubblicità né tracciamento tra app diverse.**
 
 La versione completa qui sotto spiega tutto in dettaglio, come richiesto dal Regolamento (UE) 2016/679 (GDPR).
@@ -33,7 +34,7 @@ Non è stato nominato un Responsabile della Protezione dei Dati (DPO), in quanto
 
 ## 2. A chi si rivolge questa informativa
 
-Questa informativa descrive come tratti­amo i dati di chi utilizza l'applicazione mobile **Che si fa?** ("l'App") su iOS, Android e web. L'App è un aggregatore di contenuti in **sola lettura**: gli eventi e i luoghi sono inseriti da un sistema esterno e tu li consulti, senza poterli modificare.
+Questa informativa descrive come tratti­amo i dati di chi utilizza l'applicazione mobile **Che si fa?** ("l'App") su iOS, Android e web. L'App è principalmente un aggregatore di contenuti in **sola consultazione**: gli eventi e i luoghi sono inseriti da un sistema esterno e tu li consulti. In aggiunta, l'App consente **contributi volontari e facoltativi** — segnalare un problema su un evento esistente o suggerire un nuovo evento — che vengono sottoposti a **revisione manuale** del nostro team prima di eventuali pubblicazioni.
 
 L'App è pensata per residenti, turisti e appassionati di outdoor. **Non è destinata a minori di 13 anni** (vedi § 12).
 
@@ -45,17 +46,19 @@ Trattiamo **solo i dati strettamente necessari** al funzionamento dell'App. Non 
 
 | # | Dati trattati | Finalità | Base giuridica (art. 6 GDPR) | Dove restano | Conservazione |
 |---|---|---|---|---|---|
-| A | **Identificativo anonimo del dispositivo** (`device_id`: codice casuale UUID generato sul dispositivo) | Distinguere le installazioni per diagnostica e statistiche, senza identificarti | Diagnostica: legittimo interesse (f) · Statistiche: consenso (a) | Sul dispositivo; condiviso con Sentry e (solo con consenso) PostHog | Finché non disinstalli l'App o cancelli i dati |
+| A | **Identificativo anonimo del dispositivo** (`device_id`: codice casuale UUID generato sul dispositivo) | Distinguere le installazioni per diagnostica e statistiche, senza identificarti; associare i contributi volontari e gestire eventuali abusi | Diagnostica: legittimo interesse (f) · Statistiche: consenso (a) · Contributi: legittimo interesse (f) | Sul dispositivo; condiviso con Sentry e (solo con consenso) PostHog; inviato a Supabase (UE) solo quando invii un contributo | Finché non disinstalli l'App o cancelli i dati; i contributi restano sui server secondo la riga H |
 | B | **Dati di diagnostica e crash** (modello dispositivo, sistema operativo, versione App, schermata/percorso, log tecnico dell'errore, dati di performance) | Individuare e correggere errori e crash, mantenere l'App sicura e stabile | Legittimo interesse (f) | Server Sentry (UE) | Fino a ~90 giorni |
 | C | **Statistiche di utilizzo anonime** (schermate visitate, azioni nell'App, tipo di dispositivo) | Capire come viene usata l'App e migliorarla | **Consenso (a)** | Server PostHog (UE) | Max 12 mesi, poi aggregate/cancellate |
 | D | **Posizione geografica** (coordinate GPS) | Mostrarti eventi e luoghi vicini, ordinare i risultati per distanza | Consenso, tramite permesso del sistema operativo (a) | **Solo sul tuo dispositivo**, in memoria temporanea | Non conservata: scartata alla chiusura |
 | E | **Calendario del dispositivo** (scrittura di un evento) | Aggiungere al tuo calendario un evento che hai scelto | Consenso, tramite permesso del sistema operativo (a) | **Solo sul tuo dispositivo** | Gestita dal tuo calendario |
 | F | **Preferiti, eventi salvati e impostazioni** | Far funzionare le tue liste e preferenze | Esecuzione del servizio (b) / legittimo interesse (f) | **Solo sul tuo dispositivo** (archivio locale) | Finché non li elimini o disinstalli l'App |
 | G | **Dati tecnici di connessione** (indirizzo IP, dati della richiesta) verso i fornitori che erogano contenuti, immagini, mappe e aggiornamenti | Consegnarti i contenuti e far funzionare l'App | Legittimo interesse / necessità tecnica (f) | Server dei fornitori (vedi § 6) | Secondo i log dei rispettivi fornitori |
+| H | **Contributi volontari dell'utente** (`device_id`; per le segnalazioni: tipo di problema ed eventuale commento; per i suggerimenti: titolo, data/ora, zona, categoria, città, ed eventuali descrizione, link ufficiale e nota per il team) | Migliorare la qualità e la copertura del catalogo eventi tramite segnalazioni e suggerimenti | Legittimo interesse (f) / conferimento volontario | Server **Supabase (UE)** | Finché necessario alla revisione e al miglioramento del catalogo, o fino alla tua richiesta di cancellazione (vedi § 8 e § 9) |
 
 **Note importanti:**
 
-- Il `device_id` (riga A) è un codice casuale generato sul tuo dispositivo: **non contiene il tuo nome, non è collegato alla tua identità reale** e non permette di risalire a te. Serve solo a non contare due volte la stessa installazione.
+- Il `device_id` (riga A) è un codice casuale generato sul tuo dispositivo: **non contiene il tuo nome, non è collegato alla tua identità reale** e non permette di risalire a te. Serve a non contare due volte la stessa installazione e, per i contributi (riga H), a moderare eventuali abusi e a dare seguito alle tue richieste di cancellazione o blocco.
+- I **contributi (riga H)** sono **facoltativi**: vengono inviati **solo quando scegli** di segnalare un problema o suggerire un evento. I suggerimenti **non sono pubblicati automaticamente**: restano privati e visibili solo al team finché non vengono verificati manualmente.
 - Le **statistiche d'uso (riga C)** sono attive **solo se dai il consenso**. Senza consenso, l'App funziona normalmente e non inviamo dati statistici.
 - La **posizione (riga D)** e il **calendario (riga E)** sono elaborati **solo sul tuo dispositivo**: **non li riceviamo, non li trasmettiamo e non li conserviamo** sui nostri server.
 
@@ -98,7 +101,7 @@ Non vendiamo né cediamo i tuoi dati. Per erogare il servizio ci avvaliamo di fo
 |---|---|---|---|---|
 | **Sentry** (Functional Software, Inc.) | Diagnostica crash ed errori | Dati tecnici di errore, `device_id` | UE (Germania) | https://sentry.io/privacy/ |
 | **PostHog** (PostHog, Inc.) | Statistiche d'uso (solo con consenso) | Eventi d'uso anonimi, `device_id` | UE (Francoforte) | https://posthog.com/privacy |
-| **Supabase** (Supabase, Inc.) | Database e archivio immagini dei contenuti (sola lettura) | Dati tecnici di connessione (IP) | EU (West EU — Irlanda) | https://supabase.com/privacy |
+| **Supabase** (Supabase, Inc.) | Database e archivio immagini dei contenuti; **archivio dei contributi volontari degli utenti** | Dati tecnici di connessione (IP) e, in caso di contributo, `device_id` e contenuti inviati (riga H) | EU (West EU — Irlanda) | https://supabase.com/privacy |
 | **Expo / EAS** (650 Industries, Inc.) | Distribuzione aggiornamenti dell'App (OTA) | Dati tecnici di connessione (IP, info dispositivo) | USA | https://expo.dev/privacy |
 | **Apple** (Apple Inc.) | Mappa su iOS (Apple Maps) e distribuzione tramite App Store | Dati tecnici della mappa, dati di download | Globale | https://www.apple.com/legal/privacy/ |
 | **OpenStreetMap Foundation** | Tasselli mappa su Android (tile OSM) | Dati tecnici di connessione (IP) | UE/UK | https://wiki.osmfoundation.org/wiki/Privacy_Policy |
@@ -121,6 +124,7 @@ Alcuni fornitori (es. **Expo**, **Apple**, **Google** e gli stessi Sentry/PostHo
 - **Dati locali sul dispositivo** (preferiti, impostazioni, `device_id`): conservati finché non li elimini dall'App o disinstalli l'applicazione.
 - **Diagnostica crash (Sentry):** conservata per un periodo limitato, di norma circa **90 giorni**.
 - **Statistiche d'uso (PostHog):** conservate per il tempo necessario alle finalità statistiche e comunque non oltre **12 mesi**, dopodiché sono aggregate o cancellate.
+- **Contributi volontari (Supabase, riga H):** le segnalazioni e i suggerimenti sono conservati per il tempo necessario alla revisione e al miglioramento del catalogo eventi; un eventuale blocco di un dispositivo per abuso è mantenuto finché è attivo. Puoi comunque richiederne la cancellazione (vedi § 9).
 - **Posizione e calendario:** non conservati da noi (vedi § 3).
 
 Al termine dei periodi indicati i dati sono cancellati o resi anonimi in modo irreversibile.
@@ -138,7 +142,7 @@ In qualità di interessato hai il diritto, nei limiti previsti dagli artt. 15-22
 - ottenere la **portabilità** dei dati trattati sulla base del consenso o del contratto;
 - **revocare il consenso** in qualsiasi momento (per le statistiche, direttamente dalle impostazioni dell'App), senza pregiudicare la liceità del trattamento precedente.
 
-**Come esercitarli.** La maggior parte dei dati resta sul tuo dispositivo: puoi eliminarli in autonomia cancellando i preferiti, disattivando le statistiche o disinstallando l'App. Per i dati lato server (diagnostica/statistiche) puoi scriverci all'indirizzo del § 1. Poiché ti identifichiamo solo tramite un codice anonimo (`device_id`), per darti seguito potremmo chiederti di comunicarci tale codice, reperibile nella sezione Profilo dell'App: senza di esso potremmo non essere in grado di individuare i dati che ti riguardano (art. 11 GDPR).
+**Come esercitarli.** La maggior parte dei dati resta sul tuo dispositivo: puoi eliminarli in autonomia cancellando i preferiti, disattivando le statistiche o disinstallando l'App. Per i dati lato server (diagnostica/statistiche e **contributi volontari** su Supabase) puoi scriverci all'indirizzo del § 1. Poiché ti identifichiamo solo tramite un codice anonimo (`device_id`), per darti seguito potremmo chiederti di comunicarci tale codice, reperibile nella sezione Profilo dell'App: senza di esso potremmo non essere in grado di individuare i dati che ti riguardano (art. 11 GDPR).
 
 **Reclamo all'Autorità di controllo.** Se ritieni che il trattamento violi il GDPR, hai il diritto di proporre reclamo al **Garante per la protezione dei dati personali** (Piazza Venezia 11, 00187 Roma — www.garante.it — garante@gpdp.it), oppure all'autorità dello Stato UE in cui risiedi.
 
@@ -152,7 +156,7 @@ Adottiamo misure tecniche e organizzative adeguate a proteggere i dati. In parti
 
 ## 11. Processi decisionali automatizzati
 
-**Non** effettuiamo alcun processo decisionale automatizzato, né profilazione che produca effetti giuridici o significativi nei tuoi confronti (art. 22 GDPR).
+**Non** effettuiamo alcun processo decisionale automatizzato, né profilazione che produca effetti giuridici o significativi nei tuoi confronti (art. 22 GDPR). La revisione dei contributi volontari (segnalazioni e suggerimenti) è svolta **manualmente** dal nostro team; l'eventuale sospensione di un dispositivo dalle funzioni di contributo, in caso di abuso o spam, è una misura operativa di sicurezza e non costituisce profilazione a fini di marketing.
 
 ---
 
